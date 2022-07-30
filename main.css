@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -20,14 +21,15 @@ h1 {
 }
 
 #game {
-  width: 500px;
-  height: 219px;
+  min-width: 360px;
+  height: 220px;
   border: 1px solid black;
   overflow: hidden;
   position: relative;
   z-index: 1;
 }
 
+/* button and dark transparent cover */
 #btn {
   padding: 1rem 2rem;
   border: none;
@@ -56,7 +58,7 @@ h1 {
 }
 
 #layer {
-  background-color: rgba(27, 27, 27, 0.5);
+  background-color: rgba(27, 27, 27, 0.8);
   width: 100%;
   height: 100vh;
   position: absolute;
@@ -66,7 +68,9 @@ h1 {
   bottom: 0;
   right: 0;
 }
+/* ================= */
 
+/* main field */
 #character {
   width: 50px;
   height: 50px;
@@ -89,14 +93,17 @@ h1 {
 @keyframes jump {
   0% {
     top: 150px;
+    left: 0px;
   }
 
   50% {
     top: 50px;
+    left: 50px;
   }
 
   100% {
     top: 150px;
+    left: 0px;
   }
 }
 
@@ -123,12 +130,7 @@ h1 {
   }
 }
 
+/* footer field */
 .link {
   margin-top: 5rem;
-}
-
-.link a {
-  text-decoration: none;
-  color: blueviolet;
-  font-weight: bold;
 }

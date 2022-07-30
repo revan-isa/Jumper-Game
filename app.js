@@ -53,7 +53,7 @@ let checkDead = setInterval(() => {
   );
 
   let blockLeft = parseInt(
-    window.getComputedStyle(block).getPropertyValue("left") // 480px
+    window.getComputedStyle(block).getPropertyValue("left") // 100%
   );
 
   if (blockLeft <= 50 && blockLeft >= 0 && characterTop >= 130) {
